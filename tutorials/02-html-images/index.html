@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMT 01b: HTML - Optimize Images</title>
+  </head>
+  <body>
+    <h1>01b: HTML - Optimize Images</h1>
+
+    <h2>Ben Nguyen</h2>
+    <h2>Professor Lark Alder</h2>
+    <h2>ART 109 - 080</h2>
+    <h2>Feb 09th, 2025</h2>
+
+    <img
+      src="./images/dog-480.jpg"
+      alt="A picture of golden dog"
+      width="480"
+      height="320"
+      srcset="
+        ./images/dog-480.jpg   480w,
+        ./images/dog-960.jpg   960w,
+        ./images/dog-1440.jpg 1440w,
+        ./images/dog-1920.jpg 1920w
+      "
+    />
+  </body>
+</html>

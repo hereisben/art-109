@@ -20,29 +20,31 @@ body {
   font-size: 1.6rem;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.4;
 }
 
 #home body {
+  padding: 3rem;
   background-image: url("../images/bg-home-office-studio.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: calc(100vh - 6.2rem);
 }
-
-/* #resume .container::before {
-  background-image: url("../images/bg-home-office-studio.jpg");
-  background-position: center;
-  content: "";
-  background-size: cover;
-  height: 37.5rem;
-  display: block;
-} */
 
 h1 {
   font-size: 7rem;
+  line-height: 0.85;
 }
 
 h2 {
   font-size: 3.6rem;
+}
+
+h3,
+h3 > a {
+  text-decoration: none;
+  color: black;
+  font-size: 2.4rem;
 }
 
 a:hover {
@@ -50,21 +52,14 @@ a:hover {
 }
 
 .container {
-  width: 90rem;
-  margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--container-bg-color);
   padding: 3rem;
 }
 
-.container .desc {
-  margin-top: 1.5rem;
-  font-size: 1.5rem;
-  line-height: 1.4;
-}
-
 .hyperlink {
+  display: inline-block;
   color: var(--first-hyperlink-color);
 }
 
@@ -75,18 +70,21 @@ a:hover {
 /* Footer */
 
 footer {
-  position: fixed;
   background-color: var(--footer-bg-color);
   color: #d3d4d6;
-  left: 0rem;
-  right: 0rem;
-  bottom: 0rem;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   display: flex;
   justify-content: space-between;
 }
 
-footer > * {
+#home footer {
+  position: fixed;
+  left: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+}
+
+footer ul {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -120,16 +118,62 @@ footer ul li a img {
   border-radius: 1rem;
 }
 
-footer .desc {
+.desc,
+li,
+.hyperlink {
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
-  line-height: 2.1rem;
+}
+
+.desc {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#resume header,
+#resume main {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #resume .bg-container {
-  width: 100vw;
   height: 37.5rem;
   background-image: url("../images/bg-home-office-studio.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#resume .content-wrapper {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+#resume .content-wrapper h2 {
+  border-bottom: 0.2rem dashed #d3d4d6;
+}
+
+#resume main .field {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 1.5rem;
+}
+
+#resume main .field .box {
+  display: flex;
+  gap: 2rem;
+}
+
+#resume main .field .box .thumb {
+  display: inline-block;
+}
+
+#resume main .field .box .thumb img {
+  width: 43rem;
+  object-fit: cover;
+  height: 100%;
 }

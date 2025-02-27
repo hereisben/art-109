@@ -55,7 +55,21 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--container-bg-color);
+}
+
+#home .container {
   padding: 3rem;
+}
+
+#resume .container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#resume main,
+#resume header {
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .hyperlink {
@@ -133,7 +147,7 @@ li,
 #resume header,
 #resume main,
 #home body .container {
-  max-width: 90rem;
+  max-width: 84rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -150,7 +164,19 @@ li,
   margin-top: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+}
+
+#resume .projects {
+  margin-top: 5rem;
+}
+
+#resume .exp {
+  margin-top: 5rem;
+}
+
+#resume .education {
+  margin-top: 0.5rem;
+  margin-bottom: 5rem;
 }
 
 #resume .content-wrapper h2 {
@@ -177,4 +203,63 @@ li,
   width: 43rem;
   object-fit: cover;
   height: 100%;
+}
+
+#resume .btn {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.7rem;
+  background-color: var(--first-hyperlink-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  color: #f6f6f6;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  line-height: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+#resume .btn:hover {
+  color: #bcaa96;
+}
+
+/* EXPERIENCE */
+.exp__field {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.exp__field .exp__field--jar.label-jar {
+  min-width: 30rem;
+}
+
+.exp__field .desc {
+  margin: 0rem;
+}
+
+.exp__field .exp__field--jar.detail-jar .detail-jar__wrapper {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.exp__field .exp__field--jar.detail-jar .detail-jar__wrapper ul {
+  list-style-type: disc;
+  padding-left: 4rem;
+}
+
+/* EDU */
+.education .education-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.education .education__jar > * {
+  margin: 0rem;
 }

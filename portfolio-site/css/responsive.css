@@ -1,0 +1,74 @@
+@media only screen and (max-width: 991.98px) {
+  #resume main .field .box {
+    flex-direction: column;
+  }
+
+  #resume main .field .box .thumb img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  #resume .bg-container {
+    height: 30rem;
+  }
+
+  .exp__field {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  #resume .bg-container {
+    height: 18rem;
+  }
+
+  #home .desc,
+  #home .hyperlink {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  .desc {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  #resume .content-wrapper {
+    margin-top: 2rem;
+  }
+
+  #resume .projects {
+    margin-top: 2rem;
+  }
+
+  #resume main .field {
+    gap: 2rem;
+  }
+
+  #resume .education {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+
+  .exp__field {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .desc {
+    text-align: center;
+  }
+}

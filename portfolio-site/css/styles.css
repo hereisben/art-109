@@ -153,11 +153,20 @@ li,
 }
 
 #resume .bg-container {
+  position: relative;
   height: 37.5rem;
   background-image: url("../images/bg-home-office-studio.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#resume .bg-container .download-pdf-btn {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 #resume .content-wrapper {

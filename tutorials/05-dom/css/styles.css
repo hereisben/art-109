@@ -141,3 +141,42 @@ main .content-wrapper .desc {
   font-size: 1.8rem;
   color: var(--emerald-third-color);
 }
+
+footer {
+  background-color: var(--emerald-first-color);
+  color: var(--emerald-fourth-color);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul {
+}
+
+footer .hyperlink {
+  color: var(--emerald-third-color);
+}
+
+footer .hyperlink:hover {
+  opacity: 0.5;
+}
+
+footer ul {
+  display: flex;
+  gap: 1rem;
+}
+
+footer ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul li a img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.discord-icon {
+  border-radius: 1rem;
+}

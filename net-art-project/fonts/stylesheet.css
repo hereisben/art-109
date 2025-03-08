@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('Courier-Prime/CourierPrime-Bold.woff2') format('woff2'),
+        url('Courier-Prime/CourierPrime-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('Courier-Prime/CourierPrime-Regular.woff2') format('woff2'),
+        url('Courier-Prime/CourierPrime-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('Courier-Prime/CourierPrime-Italic.woff2') format('woff2'),
+        url('Courier-Prime/CourierPrime-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Courier Prime';
+    src: url('Courier-Prime/CourierPrime-BoldItalic.woff2') format('woff2'),
+        url('Courier-Prime/CourierPrime-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

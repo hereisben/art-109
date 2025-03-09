@@ -1,7 +1,7 @@
 /* Start of JavaScript Coding... */
 
 const {
-  gsap: { set, to, timeline },
+  gsap: { set, to, timeline, bounce, elastic },
   Draggable,
 } = window;
 
@@ -17,7 +17,7 @@ const STATE = {
   ON: false,
 };
 
-const CORD_DURATION = 0.1;
+const CORD_DURATION = 0.2;
 
 const CORDS = document.querySelectorAll(".toggle-scene__cord");
 const HIT = document.querySelector(".toggle-scene__hit-spot");
@@ -43,7 +43,7 @@ const RESET = () => {
 
 RESET();
 
-// Simplified Timeline without MorphSVG
+// Elastic cord animation without MorphSVG
 const CORD_TL = timeline({
   paused: true,
   onStart: () => {
@@ -52,6 +52,7 @@ const CORD_TL = timeline({
     set([DUMMY, HIT], { display: "none" });
     set(CORDS[0], { display: "block" });
     AUDIO.CLICK.play();
+
     if (STATE.ON) {
       LIGHT_BULB_CONTAINER.classList.add("on");
       CHARS.forEach((CHAR) => CHAR.classList.add("on"));
@@ -85,17 +86,16 @@ const CORD_TL = timeline({
   },
 });
 
-// Manual Tweening Instead of Morphing
-for (let i = 1; i < CORDS.length; i++) {
-  CORD_TL.add(
-    to(DUMMY_CORD, {
-      attr: { x2: ENDX, y2: ENDY - 20 * (i % 2 === 0 ? -1 : 1) }, // Simulate a pull effect
-      duration: CORD_DURATION,
-      repeat: 1,
-      yoyo: true,
-    })
-  );
-}
+// Elastic animation for the cord
+const MAX_STRETCH = 40; // Max stretch distance in pixels
+
+CORD_TL.to(DUMMY_CORD, {
+  attr: { y2: parseFloat(ENDY) + MAX_STRETCH }, // Stretch down
+  duration: CORD_DURATION,
+  ease: "elastic.out(1, 0.5)", // Elastic easing for stretchy effect
+  yoyo: true,
+  repeat: 1,
+});
 
 Draggable.create(PROXY, {
   trigger: HIT,
@@ -119,6 +119,7 @@ Draggable.create(PROXY, {
     to(DUMMY_CORD, {
       attr: { x2: ENDX, y2: ENDY },
       duration: CORD_DURATION,
+      ease: "elastic.out(1, 0.5)", // Apply elastic effect on release
       onComplete: () => {
         if (TRAVELLED > 50) {
           CORD_TL.restart();

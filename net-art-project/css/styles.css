@@ -65,9 +65,10 @@ main .container {
   /* background-color: var(--smoke-color); */
   display: flex;
   /* justify-content: space-between; */
-  max-width: 120rem;
-  padding-left: 15vw;
-  padding-right: 15vw;
+  /* max-width: 120rem; */
+  /* padding-left: 15vw; */
+  /* padding-right: 15vw; */
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -77,8 +78,8 @@ main .container .light-bulb-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25vw;
-  height: calc((50vw / 16) * 9);
+  width: 15vw;
+  height: calc((65vw / 16) * 9);
   background-color: transparent;
   /* border: 2px solid var(--feldspar-color); */
   /* border-left: 0rem; */
@@ -94,8 +95,8 @@ main .container .content-wrapper {
 main .container .content-wrapper .frame-div {
   position: relative;
   display: flex;
-  width: 50vw;
-  height: calc((50vw / 16) * 9);
+  width: 65vw;
+  height: calc((65vw / 16) * 9);
   margin-right: auto;
   /* border: 2px solid var(--feldspar-color); */
 }
@@ -136,7 +137,7 @@ main .container .content-wrapper .frame-div {
 
 .toggle-scene {
   overflow: visible !important;
-  height: calc((50vw / 16) * 9);
+  height: calc((65vw / 16) * 9);
   position: absolute;
 }
 .toggle-scene__cord {

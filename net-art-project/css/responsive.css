@@ -1,0 +1,91 @@
+@media screen and (max-width: 1199.98px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2.author {
+    font-size: 2rem;
+  }
+
+  .container .content-wrapper .path-div .path-div__btn {
+    font-size: 1.2rem;
+  }
+
+  .container .content-wrapper .path-div .path-div__btn.char.on {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2.author {
+    font-size: 1.8rem;
+  }
+
+  .container .content-wrapper .path-div .path-div__btn {
+    font-size: 1rem;
+  }
+
+  .container .content-wrapper .path-div .path-div__btn.char.on {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2.author {
+    font-size: 1.2rem;
+  }
+
+  main .container {
+    flex-direction: column-reverse;
+  }
+
+  main .container .content-wrapper .frame-div {
+    width: 80vw;
+    height: calc((80vw / 16) * 9);
+  }
+
+  main .container .light-bulb-container {
+    height: calc((80vw / 16) * 9);
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  h1 {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+
+  h2.author {
+    font-size: 1.8rem;
+  }
+
+  main .container {
+    flex-direction: column-reverse;
+    margin-top: 0rem;
+  }
+
+  main .container .content-wrapper .frame-div {
+    width: 90vw;
+    height: calc((90vw / 16) * 9);
+  }
+
+  main .container .light-bulb-container {
+    height: calc((60vw / 16) * 9);
+  }
+
+  .container .content-wrapper .path-div .path-div__btn {
+    font-size: 0.6rem;
+  }
+
+  .container .content-wrapper .path-div .path-div__btn.char.on {
+    font-size: 0.8rem;
+  }
+}

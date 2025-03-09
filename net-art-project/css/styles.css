@@ -62,15 +62,12 @@ h2.author {
 /* Main */
 
 main .container {
-  /* background-color: var(--smoke-color); */
   display: flex;
-  /* justify-content: space-between; */
-  /* max-width: 120rem; */
-  /* padding-left: 15vw; */
-  /* padding-right: 15vw; */
+  align-items: center;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 2rem;
 }
 
 main .container .light-bulb-container {
@@ -81,15 +78,12 @@ main .container .light-bulb-container {
   width: 15vw;
   height: calc((65vw / 16) * 9);
   background-color: transparent;
-  /* border: 2px solid var(--feldspar-color); */
-  /* border-left: 0rem; */
 }
 
 main .container .content-wrapper {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  /* padding-top: 3rem; */
 }
 
 main .container .content-wrapper .frame-div {
@@ -98,7 +92,6 @@ main .container .content-wrapper .frame-div {
   width: 65vw;
   height: calc((65vw / 16) * 9);
   margin-right: auto;
-  /* border: 2px solid var(--feldspar-color); */
 }
 
 .frame-div .video-div {
@@ -231,10 +224,6 @@ main .container .content-wrapper .frame-div {
   height: 100%;
   background-color: black;
   border: 0.5px solid var(--feldspar-color);
-}
-
-.container .content-wrapper .video-div {
-  /* border: 0.5px solid var(--feldspar-color); */
 }
 
 .container .content-wrapper .path-div .path-div__btn {

@@ -13,7 +13,7 @@ flagBtns.forEach((flagBtn) => {
         ".light-bulb-container"
       );
 
-      frameDiv.style.border = "none";
+      // frameDiv.style.border = "none";
       videoFrame.style.display = "block";
     }
   });

@@ -232,7 +232,7 @@ main .container .content-wrapper .frame-div {
 }
 
 .container .content-wrapper .video-div {
-  border: 0.5px solid var(--feldspar-color);
+  /* border: 0.5px solid var(--feldspar-color); */
 }
 
 .container .content-wrapper .path-div .path-div__btn {

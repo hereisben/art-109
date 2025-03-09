@@ -1,0 +1,9 @@
+# Messi Career Journey
+
+    For my Net Art project, I wanted to provide an entertaining and dynamic way of learning about the life of Lionel Messi. My idea was to have a site that enables one to "turn on the light" to unveil Messi’s life, from the beginning of his days in La Masia to the World Cup triumph.
+
+    The overall idea of my project is to have the users "turn on the light" to reveal Messi’s achievements in a unique way. I built a grid that is in the style of a word search puzzle. When you open the light switch on, however, the big achievements in Messi’s life reveal themselves in the grid. These include key events such as his first goal for Barcelona, his first Ballon d'Or, the Sextuple, and of course, the World Cup win with Argentina.
+
+    Each milestone on the grid is clickable. When you click a highlighted term, a short video plays, and you witness Messi in action at that particular moment in his life. I wanted to create an experience that would place users in the midst of his life and provide them with the thrill of each achievement. The project is more of an adventure, as if you're discovering hidden moments by exploring the grid.
+
+    The visual look and the interactive elements are not frills—these exist to enhance the content. The light bulb animation, for example, is related to the idea of "shedding light" on the life of Messi. The grid look is also intended to engage people, challenging them to dig in and learn more about his life. I feel that this project is a great example of net art as it exploits the internet's potential to combine video, animation, and interactivity into one complete experience. You have to discover, click, and interact to fully understand the artwork. My goal was to move beyond simple presentation of facts and create a space in which the user felt connected to Messi's story, revealing each milestone as if they themselves were uncovering fragments of his story.

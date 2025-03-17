@@ -1,0 +1,22 @@
+@use "../components/" as compo;
+
+.menu-div {
+  height: 100%;
+  .menu-wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    .menu-cell {
+      @extend %isCell;
+      border-bottom: 1px solid var(--fourth-color);
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(5) {
+        border-right: 1px solid var(--fourth-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.floating-text {
+  position: absolute;
+  font-size: 18px;
+  color: white;
+  white-space: nowrap;
+  pointer-events: none; /* So it doesn't interfere with the cursor */
+  animation: floatRandomly 40s infinite ease-in-out;
+}
+
+@keyframes floatRandomly {
+  0% {
+    transform: translate(-40px, -40px) rotate(0deg);
+  }
+  20% {
+    transform: translate(100vw, 20vh) rotate(15deg);
+  }
+  40% {
+    transform: translate(-42vw, 80vh) rotate(-10deg);
+  }
+  60% {
+    transform: translate(50vw, -40vh) rotate(20deg);
+  }
+  80% {
+    transform: translate(50vw, 100vh) rotate(0deg);
+  }
+  100% {
+    transform: translate(-40px, -40px) rotate(0deg);
+  }
+}

@@ -1,0 +1,16 @@
+%isFlex {
+  display: flex;
+}
+
+%isCenteredFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%isColumnFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

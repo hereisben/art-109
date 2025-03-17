@@ -1,0 +1,121 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+
+body {
+  .blackout {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    opacity: 1;
+    transition: opacity 1s;
+    cursor: none;
+    .blackout__content {
+      @extend %isCenteredFlex;
+      .myname {
+        position: fixed;
+        top: 0rem;
+        left: 0rem;
+        @include base.bold-thirtysix-font;
+        color: var(--fifth-color);
+        padding: 2rem;
+      }
+
+      .contact-info {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+          font-size: 24px;
+          margin: 10px 0 0 0;
+          font-weight: lighter;
+          text-transform: uppercase;
+          color: #eeeeee;
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: light;
+          color: #333333;
+        }
+
+        span a {
+          font-size: 18px;
+          color: #cccccc;
+          text-decoration: none;
+          margin: 0 10px;
+          transition: all 0.4s ease-in-out;
+          &:hover {
+            color: #ffffff;
+          }
+        }
+
+        @keyframes float {
+          0% {
+            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+            transform: translatey(0px);
+          }
+          50% {
+            box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+            transform: translatey(-20px);
+          }
+          100% {
+            box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+            transform: translatey(0px);
+          }
+        }
+
+        .contact-info {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .avatar {
+          width: 150px;
+          height: 150px;
+          box-sizing: border-box;
+          border: 5px white solid;
+          border-radius: 50%;
+          overflow: hidden;
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: translatey(0px);
+          animation: float 6s ease-in-out infinite;
+          margin-left: auto;
+          margin-right: auto;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .content {
+          @extend %isColumnFlex;
+          gap: 3rem;
+          width: 100%;
+          max-width: 600px;
+          padding: 20px 40px;
+          box-sizing: border-box;
+          text-align: center;
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .floating-text {
+      text-transform: uppercase;
+      @include base.bold-twentysix-font;
+      color: var(--fourth-color);
+    }
+  }
+}

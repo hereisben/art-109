@@ -1,0 +1,16 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+
+%clickBtn {
+  text-transform: uppercase;
+  width: 11.7rem;
+  height: 5rem;
+  padding: 1.8rem 3.1rem;
+  border-radius: 2.5rem;
+  @include base.medium-fourteen-font;
+  color: var(--fourth-color);
+
+  &.active {
+    border: 1px solid var(--first-color);
+  }
+}

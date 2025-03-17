@@ -1,0 +1,42 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+
+%isCell {
+  @extend %isColumnFlex;
+  padding: 2rem;
+  gap: 4rem;
+
+  h2 {
+    justify-content: space-between;
+    @include base.medium-twentytwo-font;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+  }
+
+  div {
+    margin-bottom: auto;
+    @extend %isColumnFlex;
+    gap: 1rem;
+    a,
+    .bio-desc {
+      color: var(--fourth-color);
+      height: 2.5rem;
+      @extend %isCenteredFlex;
+      text-align: center;
+
+      &:hover,
+      &.active {
+        background-color: var(--fifth-color);
+        width: 100%;
+      }
+    }
+
+    .bio-desc {
+      display: none;
+      text-align: justify;
+      height: 100%;
+      line-height: 2.6rem;
+    }
+  }
+}

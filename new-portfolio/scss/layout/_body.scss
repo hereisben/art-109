@@ -1,0 +1,13 @@
+@use "../utils/" as utils;
+
+body {
+  background-color: black;
+  @extend %isColumnFlex;
+  height: 100vh;
+}
+
+main {
+  width: 100%;
+  padding-bottom: 1rem;
+  flex: 1;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "art-109",
+  "version": "1.0.0",
+  "description": "Demos for Art 109 at SJSU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

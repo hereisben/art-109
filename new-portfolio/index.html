@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html id="ben" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Nguyen | Web/Game Developer</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/augmented-ui@1.1.2/augmented.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/assets/images/logoIcon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div id="message-div">
+      <div id="message-container" class="message_container">
+        <div class="message" augmented-ui="exe tl-clip br-clip">
+          <div class="label-div">
+            <a
+              href=""
+              id="message-label"
+              class="title"
+              augmented-ui="exe tl-clip br-clip"
+            >
+              COMING SOON
+            </a>
+            <div
+              id="close-message"
+              class="close-message"
+              augmented-ui="exe tl-clip br-clip"
+            >
+              CLOSE
+            </div>
+          </div>
+          <p id="message-text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo,
+            corporis eum, dolorum sed voluptate tempora unde placeat quas ut
+            adipisci illum ab ea commodi sunt. Dolor dolorum neque facere
+            tempora.
+          </p>
+        </div>
+      </div>
+      <script>
+        var rsw_powered = {};
+        rsw_powered["augmented-ui"] = true;
+      </script>
+    </div>
+    <div id="blackout" class="blackout">
+      <div class="blackout__content">
+        <h1 class="myname">Ben Nguyen</h1>
+        <div id="contact-info" class="contact-info">
+          <div class="avatar">
+            <a href="https://github.com/hereisben">
+              <img src="./assets/images/BTN04997.jpg" alt="Ben Nguyen" />
+            </a>
+          </div>
+          <div class="content">
+            <h1>Floating CSS animation</h1>
+            <p>Follow me on:</p>
+            <p>
+              <span
+                ><a href="https://github.com/hereisben" target="_blank"
+                  ><i class="fa-brands fa-github"></i></a
+              ></span>
+              <span
+                ><a
+                  href="https://discord.com/users/649484696274599956"
+                  target="_blank"
+                  ><i class="fa-brands fa-discord"></i></a
+              ></span>
+              <span
+                ><a href="https://www.facebook.com/heyimben/" target="_blank"
+                  ><i class="fa-brands fa-facebook"></i></a
+              ></span>
+              <span
+                ><a
+                  href="https://linkedin.com/in/ben-nguyen-811912a0"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i></a
+              ></span>
+            </p>
+            <p>BEN NGUYEN</p>
+          </div>
+        </div>
+      </div>
+      <div id="floating-text" class="floating-text">
+        Hover over my name to hide the blackout
+      </div>
+    </div>
+
+    <header>
+      <div class="container g-3 navbar__wrapper">
+        <nav class="row navbar">
+          <div class="logo">
+            <a href="#"
+              ><img src="./assets/images/logoIcon.png" alt="Ben Logo Icon"
+            /></a>
+          </div>
+          <ul class="row nav-links">
+            <li><a class="nav-links__btn" href="#" class="active">Home</a></li>
+            <li>
+              <a
+                class="nav-links__btn"
+                id="about-btn"
+                href="#"
+                data-label="Who I Am"
+                data-message="👋 Hey, I’m Ben Nguyen, a web and game developer who enjoys creating interactive experiences. I love working on UI/UX, front-end development, and game mechanics, always pushing myself to improve."
+                >About</a
+              >
+            </li>
+            <li><a class="nav-links__btn" href="#">Services</a></li>
+            <li>
+              <a id="contact-btn" class="nav-links__btn" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="menu-toggle hide-from-md">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="menu-div container">
+        <div class="menu-wrapper">
+          <div class="menu-cell">
+            <h2 id="whoami" class="bio-label">Web & Game Development</h2>
+            <div>
+              <a
+                href=""
+                class="menu-cell_link"
+                data-label="Bouncy Quest"
+                data-message="I’m working on Bouncy Quest, a 2D platformer where players control a slime character that bounces around using physics-based movement. The challenge comes from navigating obstacles and timing jumps correctly. I’m focusing on making the controls feel smooth and fun while adding new levels and mechanics.
+
+                I built this game using Unity and C#. My next steps are improving animations, designing more levels, and adding new challenges to keep players engaged."
+                >Bouncy Quest</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link="https://hereisben.github.io/ben-ecom-project/#!"
+                data-label="E-Commerce Website"
+                data-message="This is a fully responsive e-commerce website that lets users browse products, add them to a cart, and check out smoothly. I designed it to be user-friendly and visually clean, making the shopping experience simple and efficient.
+
+                I’m building this with HTML, CSS, and JavaScript, and I plan to learn React and Firebase to make it more dynamic. My next goal is to add user accounts and improve the checkout process."
+                >E-Commerce Website</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-label="Personal Portfolio Website"
+                data-link="#"
+                data-message="My portfolio website is a place where I showcase my web development and game projects. I wanted it to look clean and feel easy to navigate, so I included smooth animations, an interactive menu, and a responsive design.
+
+                I built this using HTML, CSS, and JavaScript. I’m working on improving the content, adding SEO optimizations, and possibly integrating a blog to share what I’m learning."
+                >Personal Portfolio Website</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I’m planning a collection of small web animations and UI experiments to improve my front-end skills. I want to explore hover effects, custom buttons, parallax scrolling, and smooth transitions to make websites more interactive."
+                >Interactive Web Elements</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I want to explore game UI design, focusing on menus, HUDs, and interactive elements that improve player experience. The goal is to create functional and visually appealing UI that fits different types of games."
+                >Game UI & Interfaces</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-message="🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀"
+                data-label="Coming Soon"
+                >More...</a
+              >
+              <p class="bio-desc">
+                Yo, I’m Ben Nguyen, a web & game dev who’s all about building
+                cool, interactive stuff. Websites, games, UI experiments—you
+                name it, I’m tryna make it smooth, clean, and fun to use. Always
+                learning, coding, and leveling up. 🚀💻🎮
+              </p>
+            </div>
+          </div>
+          <div class="menu-cell">
+            <h2 id="skills" class="bio-label">
+              Design & Front-End Development
+            </h2>
+            <div>
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I want to explore creative animations and hover effects to make web interactions feel smooth and engaging. The plan is to experiment with buttons, image effects, text animations, and page transitions that improve user experience."
+                >CSS Animations & Hover Effects</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I’m brainstorming ideas to refine my portfolio’s design and theme. I want it to reflect my skills and personality while keeping it clean, modern, and easy to navigate."
+                >Portfolio Theme Exploration</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I’m studying game UI design patterns to understand what makes an interface intuitive and visually appealing. I want to analyze menus, HUDs, and interactive elements across different game genres."
+                >Game UI Research</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-message="🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀"
+                data-label="Coming Soon"
+                >More...</a
+              >
+              <p class="bio-desc">
+                I do front-end & UI/UX, aka making websites and games actually
+                look good & work right. Messing with CSS, animations, and
+                layouts to keep things ✨ sleek ✨. It’s not just about
+                vibes—it’s about keeping it smooth, fast, and fun. 🔥👀🎭
+              </p>
+            </div>
+          </div>
+          <div class="menu-cell">
+            <h2 id="community" class="bio-label">Community Engagement</h2>
+            <div>
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I want to join or create study groups where I can discuss web development and game development with others. The goal is to share knowledge, collaborate on small projects, and help each other improve through discussions and coding challenges."
+                >Web Dev & Game Dev Study Groups</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Comming Soon"
+                data-message="I plan to start a technical blog to document my web and game development journey. This will include project updates, coding tips, and insights from what I’m learning."
+                >Technical Blog & Posts</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I want to help others with coding problems and debugging as part of my learning process. Explaining solutions to others is a great way to reinforce my own understanding while building connections with fellow developers."
+                >Helping Peers with Code & Debugging</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-message="🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀"
+                data-label="Coming Soon"
+                >More...</a
+              >
+              <p class="bio-desc">
+                When I’m not coding, I’m probably on the field playing soccer.
+                It’s my way to reset, compete, and stay sharp. Just like coding,
+                it’s all about timing, control, and teamwork—whether I’m kicking
+                a ball or debugging a project. Tech & soccer? Best combo. ⚽⚡💻
+              </p>
+            </div>
+          </div>
+          <div class="menu-cell">
+            <h2 id="writing" class="bio-label">Technical Writing & Research</h2>
+            <div>
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I plan to document my portfolio development process, sharing insights on design choices, coding techniques, and best practices. This will help others looking to create their own professional websites."
+                >Building a Web Portfolio</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I want to break down the game development workflow, from idea generation and prototyping to coding and final testing. The goal is to simplify the process and make it more approachable for beginners."
+                >Game Development Process</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message="I’m exploring SEO techniques and web performance optimization to improve site visibility and speed. I plan to focus on best practices, tools, and simple steps developers can take to enhance their websites."
+                >SEO & Optimization for Developers</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-message="🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀"
+                data-label="Coming Soon"
+                >More...</a
+              >
+              <p class="bio-desc">
+                Dropping tech blogs & dev updates soon, sharing what I build,
+                how I fix bugs, and tips that actually help. No boring tech
+                talk, just straight-up insights & project breakdowns. If you’re
+                into web dev, game design, or UI experiments, stay tuned. 📜🎯🛠️
+              </p>
+            </div>
+          </div>
+          <div class="menu-cell">
+            <h2 id="learning" class="bio-label">Courses & Learning</h2>
+            <div>
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="CS 151"
+                data-message="I’m learning about object-oriented programming principles, software design patterns, and best practices for building scalable applications."
+                >CS 151 - Object-Oriented Design (SJSU)</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="CS 108"
+                data-message="This course explores game history, mechanics, and design principles, helping me understand how games are structured and what makes them engaging."
+                >CS 108 - Introduction to Game Studies</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Self-Study"
+                data-message="I’m diving into popular front-end frameworks and tools to improve my web development skills, focusing on responsive design, interactivity, and code maintainability.
+
+              "
+                >Self-Study: Bootstrap, JQuery, Sass, etc</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-message="🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀🔜✨ More to come! 🚀 Stay tuned & keep following me! 🔥👀"
+                data-label="Coming Soon"
+                >More...</a
+              >
+              <p class="bio-desc">
+                I pick up skills from SJSU courses, self-study, and breaking my
+                own code 😆. Right now, I’m diving into object-oriented design,
+                front-end frameworks, and game UI research. Always testing,
+                always tweaking. Fail fast, learn faster. 💡🚀🔍
+              </p>
+            </div>
+          </div>
+          <div class="menu-cell">
+            <h2 id="download" class="bio-label">Download</h2>
+            <div>
+              <a
+                target="_blank"
+                data-link="./assets/file/hereisben-github-io-bennguyen-resume-html.pdf"
+                data-label="Download"
+                data-message=""
+                href="./assets/file/hereisben-github-io-bennguyen-resume-html.pdf"
+                class="menu-cell_link"
+                >Resume & CV</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message=""
+                >Games</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="URL"
+                data-message=""
+                >Code & Repositories</a
+              >
+              <a
+                href=""
+                class="menu-cell_link"
+                data-link=""
+                data-label="Coming Soon"
+                data-message=""
+                >Miscellaneous</a
+              >
+              <p class="bio-desc">
+                I’m putting together my resume, game projects, and code repos—so
+                if you wanna check out my work, download my builds, or even mess
+                around with my code, go for it. Just don’t break it too bad… or
+                do. 😂 More coming soon. 🎮🔗💻
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="./assets/js/active.js"></script>
+  <script type="module" src="./assets/js/cursor-effect.js"></script>
+  <script src="./assets/js/blackout.js"></script>
+  <script src="./assets/js/message.js"></script>
+  <script src="./assets/js/bio.js"></script>
+  <script src="./assets/js/contact.js"></script>
+</html>

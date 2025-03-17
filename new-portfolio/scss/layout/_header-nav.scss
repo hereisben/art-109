@@ -1,0 +1,43 @@
+@use "../base/" as base;
+@use "../utils/" as utils;
+@use "../components/" as compo;
+
+header {
+  width: 100%;
+  .navbar__wrapper {
+    padding: 2rem 0rem;
+    border-bottom: 1px solid var(--fourth-color);
+    .navbar {
+      @extend %isCenteredFlex;
+      justify-content: space-between;
+
+      .logo {
+        height: 5rem;
+        width: auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .nav-links {
+        gap: 3rem;
+        .nav-links__btn {
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+          width: 11.7rem;
+          height: 5rem;
+          padding: 1.8rem 3.1rem;
+          border-radius: 2.5rem;
+          @include base.medium-fourteen-font;
+          color: var(--fifth-color);
+
+          &.active {
+            @include base.bold-fourteen-font;
+            color: var(--fourth-color);
+          }
+        }
+      }
+    }
+  }
+}

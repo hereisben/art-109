@@ -29,7 +29,7 @@ function showBlackout() {
 // Function to reset inactivity timer
 function resetInactivityTimer() {
   clearTimeout(inactivityTimer);
-  inactivityTimer = setTimeout(showBlackout, 10000); // 10 seconds
+  inactivityTimer = setTimeout(showBlackout, 1000000); // 10 seconds
 }
 
 // Show blackout again when mouse leaves the name

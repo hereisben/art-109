@@ -55,6 +55,7 @@
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
+    <!-- Message Div -->
     <div id="message-div">
       <div id="message-container" class="message_container">
         <div class="message" augmented-ui="exe tl-clip br-clip">
@@ -88,6 +89,7 @@
         rsw_powered["augmented-ui"] = true;
       </script>
     </div>
+    <!-- Blackout -->
     <div id="blackout" class="blackout">
       <div class="blackout__content">
         <h1 class="myname">Ben Nguyen</h1>
@@ -130,16 +132,16 @@
         Hover over my name to hide the blackout
       </div>
     </div>
-
+    <!-- HEADER -->
     <header>
-      <div class="container g-3 navbar__wrapper">
+      <div class="container g-md-3 navbar__wrapper">
         <nav class="row navbar">
           <div class="logo">
             <a href="#"
               ><img src="./assets/images/logoIcon.png" alt="Ben Logo Icon"
             /></a>
           </div>
-          <ul class="row nav-links display-from-md">
+          <ul class="row nav-links">
             <li><a class="nav-links__btn" href="#" class="active">Home</a></li>
             <li>
               <a
@@ -157,9 +159,9 @@
             </li>
           </ul>
           <div class="menu-toggle hide-from-md">
-            <span class="bar">a</span>
-            <span class="bar">a</span>
-            <span class="bar">a</span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
         </nav>
       </div>
@@ -454,7 +456,6 @@
         </div>
       </section>
     </main>
-    <footer></footer>
   </body>
   <script src="./assets/js/active.js"></script>
   <script type="module" src="./assets/js/cursor-effect.js"></script>
@@ -462,4 +463,5 @@
   <script src="./assets/js/message.js"></script>
   <script src="./assets/js/bio.js"></script>
   <script src="./assets/js/contact.js"></script>
+  <script src="./assets/js/menu-toggle.js"></script>
 </html>

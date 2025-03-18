@@ -88,4 +88,22 @@
   .menu-div .menu-wrapper .menu-cell:nth-child(5) {
     border-right: none;
   }
+
+  .navbar .menu-toggle .bar {
+    margin: 4px;
+  }
+
+  header .navbar__wrapper .navbar .logo {
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .navbar .menu-toggle .bar {
+    margin: 3px;
+  }
+
+  header .navbar__wrapper .navbar .logo {
+    height: 3rem;
+  }
 }

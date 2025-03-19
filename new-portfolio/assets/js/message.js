@@ -5,16 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const messageText = document.getElementById("message-text");
   const closeMessage = document.getElementById("close-message");
 
-  about.addEventListener("click", () => {
-    menuLinks.forEach((otherLink) => {
-      otherLink.classList.remove("active");
-    });
-
-    const message = link.getAttribute("data-message");
-    const label = link.getAttribute("data-label");
-    const liveUrl = link.getAttribute("data-link");
-  });
-
   menuLinks.forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault(); // Prevent default link behavior

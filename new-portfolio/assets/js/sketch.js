@@ -13,12 +13,16 @@ let previousParticlePosition;
 let particleFadeFrames = 300;
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(
+    windowWidth,
+    max(windowHeight, document.body.scrollHeight)
+  );
   colorMode(HSB);
-  canvas.position(0, 0);
+  canvas.style("position", "fixed"); // or 'absolute'
+  canvas.style("top", "0");
+  canvas.style("left", "0");
   canvas.style("visibility", "visible");
   canvas.style("z-index", "-2");
-  //   canvas.background(220);
 
   // Start with a default vector and then use this to save the position
   // of the last created particle
@@ -29,7 +33,7 @@ function setup() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+  resizeCanvas(windowWidth, max(windowHeight, document.body.scrollHeight));
 }
 
 function draw() {

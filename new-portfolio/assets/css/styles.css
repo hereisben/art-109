@@ -982,7 +982,7 @@ body {
   height: 100vh;
   visibility: hidden;
   user-select: none;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 main {

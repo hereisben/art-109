@@ -9,7 +9,7 @@ if (myName) {
       if (blackoutDiv.style.opacity === "0") {
         blackoutDiv.style.display = "none";
       }
-    }, 1500); // Wait for fade-out transition before hiding
+    }, 1000); // Wait for fade-out transition before hiding
   });
 }
 
@@ -23,13 +23,13 @@ function showBlackout() {
     if (blackoutDiv.style.display === "block") {
       blackoutDiv.style.opacity = "1";
     }
-  }, 1500);
+  }, 1000);
 }
 
 // Function to reset inactivity timer
 function resetInactivityTimer() {
   clearTimeout(inactivityTimer);
-  inactivityTimer = setTimeout(showBlackout, 1000000); // 10 seconds
+  inactivityTimer = setTimeout(showBlackout, 10000); // 10 seconds
 }
 
 // Show blackout again when mouse leaves the name

@@ -981,6 +981,8 @@ body {
   background-color: black;
   height: 100vh;
   visibility: hidden;
+  user-select: none;
+  overflow: hidden;
 }
 
 main {

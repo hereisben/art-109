@@ -5,6 +5,8 @@ body {
   @extend %isColumnFlex;
   height: 100vh;
   visibility: hidden;
+  user-select: none;
+  overflow: hidden;
 }
 
 main {

@@ -980,6 +980,7 @@ header .navbar__wrapper .navbar .nav-links .nav-links__btn.active {
 body {
   background-color: black;
   height: 100vh;
+  visibility: hidden;
 }
 
 main {

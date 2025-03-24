@@ -4,6 +4,7 @@ body {
   background-color: black;
   @extend %isColumnFlex;
   height: 100vh;
+  visibility: hidden;
 }
 
 main {

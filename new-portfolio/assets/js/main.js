@@ -2,25 +2,24 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
-// import { GUI } from "/node_modules/dat.gui/build/dat.gui.module.js";
 
 let camera, scene, renderer, controls, model, mixer;
 let light, ambientLight;
 const contactContainer = document.getElementById("contact-info");
 const sceneContainer = document.getElementById("box-container");
-
-// const gui = new GUI();
-// const params = {
-//   lightness: 0.5,
-//   opacity: 1,
-// };
+const loaderContainer = document.getElementById("loader");
 
 const clock = new THREE.Clock();
 
+// Setup GLTF + DRACO loader
 const loader = new GLTFLoader();
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
 loader.setDRACOLoader(dracoLoader);
+
+// Store once loaded
+let preloadedModel = null;
+let preloadedAnimations = [];
 
 function init() {
   scene = new THREE.Scene();
@@ -46,37 +45,40 @@ function init() {
 
   ambientLight = new THREE.AmbientLight(0xffffff, 1);
   scene.add(ambientLight);
-
-  // GUI Controls
-  // gui
-  //   .add(params, "lightness", 0, 1)
-  //   .onChange((val) => (ambientLight.intensity = val));
-  // gui.add(params, "opacity", 0, 1);
-
-  // document.getElementById("blackout").appendChild(gui.domElement.parentNode);
 }
+
+loader.load(
+  "./assets/textures/computer.glb",
+  (gltf) => {
+    preloadedModel = gltf.scene;
+    preloadedAnimations = gltf.animations;
+    console.log("Model + animations preloaded");
+    loaderContainer.style.display = "none"; // Hide loader once loaded
+    loadModel(); // Load immediately once ready
+  },
+  (xhr) => {
+    const percent = ((xhr.loaded / xhr.total) * 100).toFixed(1);
+    console.log(`Loading model: ${percent}%`);
+  },
+  (error) => {
+    console.error("Error preloading model:", error);
+  }
+);
 
 function loadModel() {
   if (window.getComputedStyle(contactContainer).display === "block") return;
+  if (!preloadedModel) return;
 
-  loader.load(
-    "./assets/textures/computer.glb",
-    (gltf) => {
-      model = gltf.scene;
-      model.position.set(0, -0.5, 0);
-      model.scale.set(1.2, 1.2, 1.2);
-      scene.add(model);
+  model = preloadedModel.clone(true); // Deep clone
+  model.position.set(0, -0.5, 0);
+  model.scale.set(1.2, 1.2, 1.2);
+  scene.add(model);
 
-      mixer = new THREE.AnimationMixer(model);
-      gltf.animations.forEach((clip) => mixer.clipAction(clip).play());
-    },
-    (xhr) => {
-      console.log(`Model ${(xhr.loaded / xhr.total) * 100}% loaded`);
-    },
-    (error) => {
-      console.error("Error loading model:", error);
-    }
-  );
+  mixer = new THREE.AnimationMixer(model);
+  preloadedAnimations.forEach((clip) => {
+    const action = mixer.clipAction(clip);
+    action.play();
+  });
 }
 
 function animate() {
@@ -84,6 +86,7 @@ function animate() {
   const delta = clock.getDelta();
 
   if (mixer) mixer.update(delta);
+
   if (
     model &&
     contactContainer &&
@@ -111,4 +114,3 @@ window.addEventListener("resize", onWindowResize, false);
 
 init();
 animate();
-setTimeout(loadModel, 100); // Defer model loading slightly

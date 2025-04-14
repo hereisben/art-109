@@ -14,14 +14,14 @@ body {
     cursor: none;
     .blackout__content {
       @extend %isCenteredFlex;
-      .myname {
-        position: fixed;
-        top: 0rem;
-        left: 0rem;
-        @include base.bold-thirtysix-font;
-        color: var(--fifth-color);
-        padding: 2rem;
-      }
+      // .myname {
+      //   position: fixed;
+      //   top: 0rem;
+      //   left: 0rem;
+      //   @include base.bold-thirtysix-font;
+      //   color: var(--fifth-color);
+      //   padding: 2rem;
+      // }
 
       .contact-info {
         display: none;
@@ -117,5 +117,28 @@ body {
       @include base.bold-twentysix-font;
       color: var(--fourth-color);
     }
+  }
+}
+
+#box-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  // pointer-events: none;
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+
+  .myname {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    @include base.bold-thirtysix-font;
+    color: var(--fifth-color);
+    padding: 2rem;
   }
 }

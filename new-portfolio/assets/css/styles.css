@@ -20,6 +20,12 @@ span {
   text-decoration: none;
 }
 
+.dg {
+  position: fixed;
+  right: 5rem;
+  top: 5rem;
+}
+
 #message-div .message_container .message .label-div {
   display: flex;
 }
@@ -1018,16 +1024,6 @@ body .blackout {
   transition: opacity 1s;
   cursor: none;
 }
-body .blackout .blackout__content .myname {
-  position: fixed;
-  top: 0rem;
-  left: 0rem;
-  font-size: 3.6rem;
-  font-weight: 700;
-  line-height: 5rem;
-  color: var(--fifth-color);
-  padding: 2rem;
-}
 body .blackout .blackout__content .contact-info {
   display: none;
   position: fixed;
@@ -1113,6 +1109,29 @@ body .blackout .floating-text {
   line-height: 3.6rem;
   font-weight: 700;
   color: var(--fourth-color);
+}
+
+#box-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#box-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+#box-container .myname {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 5rem;
+  color: var(--fifth-color);
+  padding: 2rem;
 }
 
 #message-div {

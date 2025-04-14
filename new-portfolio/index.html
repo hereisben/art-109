@@ -60,6 +60,16 @@
     />
     <link rel="manifest" href="./assets/favicon/site.webmanifest" />
     <meta name="theme-color" content="#ffffff" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@v0.174.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.174.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module" src="./assets/js/main.js"></script>
   </head>
   <body>
     <!-- Message Div -->
@@ -96,10 +106,11 @@
         rsw_powered["augmented-ui"] = true;
       </script>
     </div>
+
     <!-- Blackout -->
     <div id="blackout" class="blackout">
       <div class="blackout__content">
-        <h1 class="myname">Ben Nguyen</h1>
+        <!-- <label class="myname">Ben Nguyen</label> -->
         <div id="contact-info" class="contact-info">
           <div class="avatar">
             <a href="https://github.com/hereisben">
@@ -136,6 +147,9 @@
       </div>
       <div id="floating-text" class="floating-text">
         Hover over my name to hide the blackout
+      </div>
+      <div id="box-container">
+        <label class="myname">Ben Nguyen</label>
       </div>
     </div>
     <!-- HEADER -->

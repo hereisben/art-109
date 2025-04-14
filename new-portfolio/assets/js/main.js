@@ -60,7 +60,7 @@ function loadModel() {
   if (window.getComputedStyle(contactContainer).display === "block") return;
 
   loader.load(
-    "/new-portfolio/assets/textures/computer.glb",
+    "./assets/textures/computer.glb",
     (gltf) => {
       model = gltf.scene;
       model.position.set(0, -0.5, 0);

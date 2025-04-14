@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  height: 100%;
+  font-size: 24px;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#three-container {
+  /* position: fixed; */
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 50vh;
+  margin: 0 auto;
+}
+
+#egg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* overflow-y: scroll; */
+}
+
+#three-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

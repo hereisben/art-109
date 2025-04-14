@@ -1126,7 +1126,7 @@ body .blackout #loader .spinner {
   border: 4px solid var(--spinner-border);
   border-top-color: var(--spinner-transparent);
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 2s linear infinite;
 }
 @keyframes spin {
   to {

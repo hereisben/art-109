@@ -1,0 +1,21 @@
+{
+  "name": "shared-draw",
+  "version": "1.0.0",
+  "description": "A shared drawing app with sockets",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "drawing",
+    "sockets",
+    "p5js"
+  ],
+  "author": "Ben Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}

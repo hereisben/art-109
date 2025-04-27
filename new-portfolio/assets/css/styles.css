@@ -30,14 +30,20 @@ span {
   display: flex;
 }
 
-#message-div, body .blackout .blackout__content, header .navbar__wrapper .navbar, .menu-div .menu-wrapper .menu-cell div a,
+#message-div,
+body .blackout .blackout__content,
+header .navbar__wrapper .navbar,
+.menu-div .menu-wrapper .menu-cell div a,
 .menu-div .menu-wrapper .menu-cell div .bio-desc {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-body .blackout .blackout__content .contact-info .content, body, .menu-div .menu-wrapper .menu-cell, .menu-div .menu-wrapper .menu-cell div {
+body .blackout .blackout__content .contact-info .content,
+body,
+.menu-div .menu-wrapper .menu-cell,
+.menu-div .menu-wrapper .menu-cell div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,12 +82,15 @@ body {
   display: block;
 }
 
-.col, .container, .container-fluid {
+.col,
+.container,
+.container-fluid {
   padding-left: var(--gutter-x-spacing-value);
   padding-right: var(--gutter-x-spacing-value);
 }
 
-.container, .container-fluid {
+.container,
+.container-fluid {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -93,7 +102,8 @@ body {
   margin-left: calc(-1 * var(--gutter-x-spacing-value));
   margin-right: calc(-1 * var(--gutter-x-spacing-value));
 }
-.row[class*=row-cols-] > *, .row[class*=col-] {
+.row[class*="row-cols-"] > *,
+.row[class*="col-"] {
   flex: 0 0 auto;
 }
 
@@ -841,7 +851,8 @@ body {
   height: 2.5rem;
   text-align: center;
 }
-.menu-div .menu-wrapper .menu-cell div a:hover, .menu-div .menu-wrapper .menu-cell div a.active,
+.menu-div .menu-wrapper .menu-cell div a:hover,
+.menu-div .menu-wrapper .menu-cell div a.active,
 .menu-div .menu-wrapper .menu-cell div .bio-desc:hover,
 .menu-div .menu-wrapper .menu-cell div .bio-desc.active {
   background-color: var(--fifth-color);
@@ -1009,7 +1020,10 @@ main {
 .menu-div .menu-wrapper .menu-cell {
   border-bottom: 1px solid var(--fourth-color);
 }
-.menu-div .menu-wrapper .menu-cell:nth-child(1), .menu-div .menu-wrapper .menu-cell:nth-child(2), .menu-div .menu-wrapper .menu-cell:nth-child(4), .menu-div .menu-wrapper .menu-cell:nth-child(5) {
+.menu-div .menu-wrapper .menu-cell:nth-child(1),
+.menu-div .menu-wrapper .menu-cell:nth-child(2),
+.menu-div .menu-wrapper .menu-cell:nth-child(4),
+.menu-div .menu-wrapper .menu-cell:nth-child(5) {
   border-right: 1px solid var(--fourth-color);
 }
 

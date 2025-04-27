@@ -22,7 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
       messageText.textContent = message;
       messageLabel.textContent = label;
       messageLabel.setAttribute("href", liveUrl);
-      messageLabel.setAttribute("target", "_blank");
+      if (messageLabel.textContent != "Coming Soon") {
+        messageLabel.setAttribute("target", "_blank");
+        messageLabel.style.pointerEvents = "auto";
+      } else {
+        messageLabel.style.pointerEvents = "none";
+      }
+
       messageContainer.classList.add("active");
     });
   });

@@ -1,19 +1,18 @@
 const socket = io();
 const users = {};
 let activeTime = 0;
+let mood =
+  localStorage.getItem("mood") || prompt("What's your vibe right now?");
+if (!localStorage.getItem("mood")) {
+  localStorage.setItem("mood", mood);
+}
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-const avatarType = prompt("Choose your avatar: plant / animal / moon");
-const validTypes = ["plant", "animal", "moon"];
-const finalType = validTypes.includes(avatarType)
-  ? avatarType
-  : validTypes[Math.floor(Math.random() * validTypes.length)];
-document.getElementById(
-  "avatarText"
-).textContent = `You’re growing a ${finalType}!`;
-const mood = prompt("What's your vibe right now?");
+window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("avatarText").textContent = `You’re growing a plant!`;
+});
 
 function resizeCanvas() {
   const dpr = window.devicePixelRatio || 1;
@@ -27,24 +26,17 @@ function resizeCanvas() {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 
-function getGrowthEmoji(t, type) {
-  const sets = {
-    plant: ["🌱", "🌿", "🌳", "🌻"],
-    animal: ["🐭", "🐹", "🐱", "🐯"],
-    moon: ["🌑", "🌓", "🌕", "🌙"],
-  };
-
-  // If invalid type or "random", pick one of the 3 sets randomly
-  const validTypes = Object.keys(sets);
-  const chosenType = validTypes.includes(type)
-    ? type
-    : validTypes[Math.floor(Math.random() * validTypes.length)];
-  const selectedSet = sets[chosenType];
-
-  if (t > 1000) return selectedSet[3];
-  if (t > 500) return selectedSet[2];
-  if (t > 100) return selectedSet[1];
-  return selectedSet[0];
+function getGrowthStage(t) {
+  if (t > 42000) return { emoji: "🌻", name: "Full Bloom" };
+  if (t > 37000) return { emoji: "🌼", name: "Peak Bloom" };
+  if (t > 32000) return { emoji: "🌺", name: "Flowering" };
+  if (t > 26000) return { emoji: "🌸", name: "Budding" };
+  if (t > 20000) return { emoji: "🌳", name: "Mature Tree" };
+  if (t > 14000) return { emoji: "🌲", name: "Young Tree" };
+  if (t > 9000) return { emoji: "🌾", name: "Vegetative" };
+  if (t > 5000) return { emoji: "🌿", name: "Seedling" };
+  if (t > 2000) return { emoji: "🌱", name: "Germination" };
+  return { emoji: "🌰", name: "Seed" };
 }
 
 function drawUser(x, y, emoji, alpha = 1, identity = {}) {
@@ -105,6 +97,21 @@ socket.on("existing users", (existing) => {
   }
 });
 
+socket.emit("request session");
+
+socket.on("restore session", (data) => {
+  if (data && data.activeTime) {
+    activeTime = data.activeTime;
+  } else {
+    const storedTime = Number(localStorage.getItem("activeTime")) || 0;
+    activeTime = storedTime;
+  }
+
+  if (data && data.mood) {
+    mood = data.mood;
+  }
+});
+
 socket.on("cursor update", (data) => {
   users[data.id] = {
     ...data,
@@ -115,40 +122,36 @@ socket.on("cursor update", (data) => {
 
 socket.on("connect", () => {
   document.addEventListener("mousemove", (e) => {
-    activeTime += 1;
+    activeTime += 100;
+    localStorage.setItem("activeTime", activeTime);
+    const stage = getGrowthStage(activeTime);
     const data = {
       x: e.clientX,
       y: e.clientY,
-      growth: getGrowthEmoji(activeTime, finalType),
+      growth: stage.emoji,
+      activeTime,
       lastSeen: Date.now(),
       identity: {
-        avatarType,
         mood,
       },
     };
     // Update growth progress bar
-    const percent = Math.min(activeTime / 1000, 1);
-    if (activeTime < 1000) {
-      document.getElementById(
-        "growthLabel"
-      ).textContent = `${activeTime} / 1000`;
-    } else {
-      document.getElementById("growthLabel").textContent = `1000 / 1000`;
-    }
+    const percent = Math.min(activeTime / 42000, 1);
+    document.getElementById("growthLabel").textContent = `${Math.min(
+      activeTime,
+      42000
+    )} / 42000`;
+    document.getElementById(
+      "growthStage"
+    ).textContent = `Stage: ${stage.emoji} ${stage.name}`;
 
     // Update each segment width
-    document.getElementById("bar1").style.width = `${
-      Math.min(percent, 0.25) * 100
-    }%`;
-    document.getElementById("bar2").style.width = `${
-      Math.max(Math.min(percent - 0.25, 0.25), 0) * 100
-    }%`;
-    document.getElementById("bar3").style.width = `${
-      Math.max(Math.min(percent - 0.5, 0.25), 0) * 100
-    }%`;
-    document.getElementById("bar4").style.width = `${
-      Math.max(Math.min(percent - 0.75, 0.25), 0) * 100
-    }%`;
+    for (let i = 0; i < 10; i++) {
+      const segment = document.getElementById(`bar${i + 1}`);
+      segment.style.width = `${
+        Math.max(Math.min(percent - i * 0.1, 0.1), 0) * 100
+      }%`;
+    }
     socket.emit("cursor update", data);
     users[socket.id] = data;
   });
@@ -171,8 +174,15 @@ function showWhisper(text) {
   document.body.appendChild(div);
   div.style.left = Math.random() * window.innerWidth + "px";
   div.style.top = Math.random() * window.innerHeight + "px";
-  setTimeout(() => div.remove(), 5000);
+  setTimeout(() => div.remove(), 10 * 60 * 1000);
 }
+
+socket.on("plant count", (count) => {
+  const countBox = document.getElementById("plantCount");
+  if (countBox) {
+    countBox.textContent = `🌻 Plants we’ve grown together: ${count}`;
+  }
+});
 
 function drawRoundedRect(ctx, x, y, width, height, radius) {
   ctx.beginPath();
